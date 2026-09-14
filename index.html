@@ -1,0 +1,404 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Tailtale — Privacy Policy &amp; Terms of Use</title>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,500;0,9..144,600;1,9..144,500&family=Public+Sans:wght@400;500;600;700&family=IBM+Plex+Mono:wght@500&display=swap">
+<style>
+  :root{
+    --bg:#faf9f5;
+    --surface:#ffffff;
+    --ink:#24261f;
+    --ink-soft:#5b5e52;
+    --ink-faint:#8b8d7e;
+    --accent:#3e6657;
+    --accent-strong:#2d4c40;
+    --accent-soft:#e4ece6;
+    --line:#e4e1d7;
+    --amber:#a8632e;
+    --amber-soft:#f3e6d8;
+    color-scheme: light;
+  }
+  @media (prefers-color-scheme: dark){
+    :root:not([data-theme="light"]){
+      --bg:#14160f;
+      --surface:#1c1f16;
+      --ink:#ede9de;
+      --ink-soft:#a9ac9c;
+      --ink-faint:#767a68;
+      --accent:#83bb9f;
+      --accent-strong:#a3d3ba;
+      --accent-soft:#23312a;
+      --line:#2c3025;
+      --amber:#dd9d63;
+      --amber-soft:#332619;
+      color-scheme: dark;
+    }
+  }
+  :root[data-theme="dark"]{
+    --bg:#14160f;
+    --surface:#1c1f16;
+    --ink:#ede9de;
+    --ink-soft:#a9ac9c;
+    --ink-faint:#767a68;
+    --accent:#83bb9f;
+    --accent-strong:#a3d3ba;
+    --accent-soft:#23312a;
+    --line:#2c3025;
+    --amber:#dd9d63;
+    --amber-soft:#332619;
+    color-scheme: dark;
+  }
+
+  *{box-sizing:border-box;}
+  html,body{ height:auto; }
+  body{
+    margin:0;
+    background:var(--bg);
+    color:var(--ink);
+    font-family:"Public Sans", -apple-system, "Segoe UI", sans-serif;
+    -webkit-font-smoothing:antialiased;
+  }
+  h1,h2,h3{
+    font-family:"Fraunces", Georgia, serif;
+    font-weight:600;
+    text-wrap:balance;
+    color:var(--ink);
+    margin:0;
+  }
+  .mono{
+    font-family:"IBM Plex Mono", ui-monospace, monospace;
+    letter-spacing:.04em;
+  }
+  a{ color:var(--accent-strong); }
+  a:hover{ color:var(--accent); }
+
+  /* ---- top bar ---- */
+  .topbar{
+    position:sticky; top:0; z-index:10;
+    background:color-mix(in srgb, var(--bg) 88%, transparent);
+    backdrop-filter:blur(8px);
+    border-bottom:1px solid var(--line);
+  }
+  .topbar-inner{
+    max-width:760px; margin:0 auto;
+    padding:14px 20px;
+    display:flex; align-items:center; justify-content:space-between;
+    gap:16px;
+  }
+  .wordmark{
+    display:flex; align-items:center; gap:8px;
+    font-family:"Fraunces", serif; font-weight:600; font-size:1.05rem;
+    color:var(--ink);
+    text-decoration:none;
+  }
+  .wordmark svg{ width:22px; height:22px; flex:none; }
+  .toplinks{ display:flex; gap:4px; }
+  .toplinks a{
+    font-size:.86rem; font-weight:600; text-decoration:none;
+    color:var(--ink-soft);
+    padding:7px 12px; border-radius:999px;
+    transition:background .15s ease, color .15s ease;
+    white-space:nowrap;
+  }
+  .toplinks a:hover{ background:var(--accent-soft); color:var(--accent-strong); }
+
+  /* ---- shell ---- */
+  main{ max-width:760px; margin:0 auto; padding:0 20px 96px; }
+  .masthead{ padding:56px 0 36px; border-bottom:1px solid var(--line); }
+  .eyebrow{
+    display:inline-block;
+    font-size:.72rem; font-weight:500; text-transform:uppercase;
+    letter-spacing:.1em; color:var(--accent-strong);
+    background:var(--accent-soft);
+    padding:5px 10px; border-radius:5px;
+    margin-bottom:16px;
+  }
+  .masthead h1{ font-size:2.1rem; line-height:1.15; margin-bottom:10px; }
+  .masthead p{ color:var(--ink-soft); font-size:1rem; max-width:56ch; margin:0; }
+  .meta-row{
+    display:flex; gap:18px; flex-wrap:wrap;
+    margin-top:22px; font-size:.82rem; color:var(--ink-faint);
+  }
+  .meta-row span b{ color:var(--ink-soft); font-weight:600; }
+
+  /* ---- at a glance ---- */
+  .glance{
+    margin:36px 0 8px;
+    background:var(--surface);
+    border:1px solid var(--line);
+    border-radius:14px;
+    padding:22px 24px;
+  }
+  .glance h2{ font-size:1.02rem; margin-bottom:14px; }
+  .glance ul{ list-style:none; margin:0; padding:0; display:grid; gap:11px; }
+  .glance li{
+    display:flex; gap:10px; align-items:baseline;
+    font-size:.93rem; color:var(--ink-soft); line-height:1.5;
+  }
+  .glance li b{ color:var(--ink); font-weight:600; }
+  .glance li::before{
+    content:"";
+    width:6px; height:6px; border-radius:50%;
+    background:var(--accent);
+    flex:none; margin-top:.55em;
+  }
+
+  /* ---- doc sections ---- */
+  article{ padding-top:44px; }
+  .doc-title{
+    display:flex; align-items:baseline; gap:12px;
+    margin-bottom:6px;
+    padding-top:8px;
+  }
+  .doc-title h2{ font-size:1.5rem; }
+  .doc-sub{ color:var(--ink-faint); font-size:.88rem; margin:0 0 32px; }
+
+  section.clause{ margin:0 0 30px; }
+  section.clause h3{
+    font-size:1.02rem;
+    display:flex; align-items:baseline; gap:10px;
+    margin-bottom:10px;
+  }
+  section.clause h3 .num{
+    font-family:"IBM Plex Mono", monospace;
+    font-size:.78rem; font-weight:500;
+    color:var(--accent-strong);
+    background:var(--accent-soft);
+    padding:2px 7px; border-radius:5px;
+  }
+  section.clause p, section.clause li{
+    font-size:.95rem; line-height:1.68; color:var(--ink-soft);
+    max-width:64ch;
+  }
+  section.clause p + p{ margin-top:12px; }
+  section.clause ul{ margin:10px 0 0; padding-left:1.1em; }
+  section.clause li + li{ margin-top:8px; }
+  section.clause strong{ color:var(--ink); font-weight:600; }
+
+  /* ---- data table ---- */
+  .table-wrap{ overflow-x:auto; margin-top:6px; border:1px solid var(--line); border-radius:10px; }
+  table{ border-collapse:collapse; width:100%; min-width:560px; font-size:.86rem; }
+  thead th{
+    text-align:left; font-weight:600; color:var(--ink);
+    background:var(--accent-soft);
+    padding:10px 14px; font-size:.78rem;
+    text-transform:uppercase; letter-spacing:.05em;
+    border-bottom:1px solid var(--line);
+  }
+  tbody td{
+    padding:11px 14px; color:var(--ink-soft);
+    border-bottom:1px solid var(--line);
+    vertical-align:top;
+  }
+  tbody tr:last-child td{ border-bottom:none; }
+  tbody td:first-child{ color:var(--ink); font-weight:500; }
+  .tag{
+    display:inline-block; font-size:.74rem; font-weight:600;
+    padding:2px 8px; border-radius:999px;
+  }
+  .tag.no{ background:var(--accent-soft); color:var(--accent-strong); }
+  .tag.yes{ background:var(--amber-soft); color:var(--amber); }
+
+  .callout{
+    border:1px solid var(--line);
+    border-left:3px solid var(--accent);
+    background:var(--surface);
+    border-radius:0 10px 10px 0;
+    padding:16px 18px;
+    margin-top:8px;
+  }
+  .callout p{ margin:0; }
+
+  footer{
+    max-width:760px; margin:0 auto; padding:40px 20px 60px;
+    border-top:1px solid var(--line);
+    display:flex; justify-content:space-between; flex-wrap:wrap; gap:10px;
+    font-size:.82rem; color:var(--ink-faint);
+  }
+
+  @media (max-width:600px){
+    .masthead{ padding:40px 0 28px; }
+    .masthead h1{ font-size:1.65rem; }
+    .toplinks a{ padding:6px 9px; font-size:.8rem; }
+  }
+</style>
+</head>
+<body>
+
+<div class="topbar">
+  <div class="topbar-inner">
+    <a class="wordmark" href="#top">
+      <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M4 12c0-4.4 3.4-8 8-8 3.6 0 6 2.2 6 5 0 2.4-1.8 4-4 4-1.4 0-2-.8-2-1.8 0-.9.6-1.6 1.4-1.6.5 0 .8.3.8.7" stroke="var(--accent)" stroke-width="1.6" stroke-linecap="round"/>
+        <circle cx="8.4" cy="11.6" r="1.15" fill="var(--accent)"/>
+      </svg>
+      Tailtale
+    </a>
+    <nav class="toplinks">
+      <a href="#privacy">Privacy Policy</a>
+      <a href="#terms">Terms of Use</a>
+    </nav>
+  </div>
+</div>
+
+<main id="top">
+  <div class="masthead">
+    <span class="eyebrow">Legal</span>
+    <h1>Privacy Policy &amp; Terms of Use</h1>
+    <p>Tailtale is a health diary for dogs, cats and other pets. This page explains what the app does with your data and the terms under which you use it.</p>
+    <div class="meta-row">
+      <span><b>Effective</b> September 14, 2026</span>
+      <span><b>Applies to</b> Tailtale for iOS, iPadOS and watchOS</span>
+      <span><b>Language</b> English (other languages to follow)</span>
+    </div>
+  </div>
+
+  <div class="glance">
+    <h2>At a glance</h2>
+    <ul>
+      <li><b>No account required.</b> Tailtale works fully offline; nothing is created on our servers to use it.</li>
+      <li><b>Your records stay yours.</b> Entries live on your device and sync only through your own private iCloud.</li>
+      <li><b>AI features are opt-in.</b> A photo, recording or note is sent to our AI provider only after you approve that specific request.</li>
+      <li><b>No advertising, no tracking, no data sold.</b> We don't run ads and don't use the App Tracking Transparency identifier.</li>
+      <li><b>Export or delete anytime.</b> PDF, CSV and JSON export is always free; deleting a record removes it from your devices and iCloud.</li>
+    </ul>
+  </div>
+
+  <article id="privacy">
+    <div class="doc-title"><h2>Privacy Policy</h2></div>
+    <p class="doc-sub">What Tailtale collects, why, and who it's shared with.</p>
+
+    <section class="clause">
+      <h3><span class="num">1</span>Where your data lives</h3>
+      <p>Tailtale is built offline-first. Pet profiles, vaccination and treatment records, weight, symptoms, lab results, visits and documents are stored on your device using Apple's SwiftData framework. If iCloud is signed in, the same records sync to <strong>your</strong> private CloudKit database — a part of your iCloud storage that only your devices and Apple's infrastructure can read. We do not operate a server that stores your pets' health records, and we cannot read your private CloudKit data.</p>
+    </section>
+
+    <section class="clause">
+      <h3><span class="num">2</span>What we collect, and why</h3>
+      <p>Beyond the records described above, the table below lists every category of data the app or its service providers collect, matching the disclosures in Tailtale's App Store privacy label.</p>
+      <div class="table-wrap">
+        <table>
+          <thead><tr><th>Category</th><th>Collected</th><th>Purpose</th><th>Linked to you</th></tr></thead>
+          <tbody>
+            <tr><td>Crash &amp; performance diagnostics</td><td><span class="tag yes">Yes</span></td><td>Fix bugs, keep the app fast</td><td>No</td></tr>
+            <tr><td>Product interaction events</td><td><span class="tag yes">Yes</span></td><td>Understand which features are used</td><td>No — no name, no free text</td></tr>
+            <tr><td>Anonymous device / install identifier</td><td><span class="tag yes">Yes</span></td><td>Analytics, entitlement lookup</td><td>Yes, to an anonymous ID only</td></tr>
+            <tr><td>Purchase history</td><td><span class="tag yes">Yes</span></td><td>Unlock the features you paid for</td><td>Yes, to an anonymous ID only</td></tr>
+            <tr><td>Photos you submit to AI features</td><td><span class="tag yes">Yes, on request</span></td><td>Read a lab report, passport or food label you chose to scan</td><td>No</td></tr>
+            <tr><td>Audio you submit to AI features</td><td><span class="tag yes">Yes, on request</span></td><td>Transcribe a vet visit you chose to record (Pro)</td><td>No</td></tr>
+            <tr><td>Text you submit to AI features</td><td><span class="tag yes">Yes, on request</span></td><td>Answer a question or summarize an entry you chose to ask about</td><td>No</td></tr>
+            <tr><td>Contacts, location, browsing history, financial or health-app data</td><td><span class="tag no">Not collected</span></td><td>—</td><td>—</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+
+    <section class="clause">
+      <h3><span class="num">3</span>AI features and OpenAI</h3>
+      <p>Features marked "AI" — lab report and passport scanning, food label lookup, visit transcription, and chat-style explanations — send only the specific photo, recording or text you submit for that request to our AI provider, OpenAI, through its API. Each of these features asks for your consent the first time you use it, before anything is sent.</p>
+      <p>Under OpenAI's API terms, content submitted through the API is not used to train their models and is retained only as needed to provide the service and meet legal obligations, not indefinitely for other purposes. Tailtale does not store AI-extracted results (lab values, passport fields, summaries) until you review and confirm them — a low-confidence quick entry or extraction is discarded if you don't accept it.</p>
+      <p>Tailtale does not use AI to diagnose conditions or prescribe treatment. AI output is labeled as AI-generated and is informational only — see <a href="#terms-medical">§4 of the Terms</a>.</p>
+    </section>
+
+    <section class="clause">
+      <h3><span class="num">4</span>Purchases</h3>
+      <p>Subscriptions and one-time purchases are processed by Apple through the App Store; Tailtale never sees your payment details. Purchase state is tracked by our subscription provider (RevenueCat) against an anonymous identifier so the app can unlock the features you've paid for across your devices.</p>
+    </section>
+
+    <section class="clause">
+      <h3><span class="num">5</span>Advertising and tracking</h3>
+      <p>Tailtale shows no advertising and does not use the App Tracking Transparency identifier (IDFA). We do not sell data and do not share it with data brokers.</p>
+    </section>
+
+    <section class="clause">
+      <h3><span class="num">6</span>Your controls</h3>
+      <ul>
+        <li><strong>Export</strong> — a full PDF, CSV or JSON export of your data is available at any time, on every plan, at no cost.</li>
+        <li><strong>Delete</strong> — deleting a pet, entry or document removes it from your devices and your private iCloud. Some entries use a short-lived "undo" state before they're finally removed.</li>
+        <li><strong>Turn off AI</strong> — AI features are opt-in per request; declining consent keeps the app fully usable without them.</li>
+        <li><strong>Turn off iCloud sync</strong> — from iOS Settings; your data then stays local to the device.</li>
+      </ul>
+    </section>
+
+    <section class="clause">
+      <h3><span class="num">7</span>Children</h3>
+      <p>Tailtale is rated 13+ and is not directed at children under 13. We do not knowingly collect data from children under 13.</p>
+    </section>
+
+    <section class="clause">
+      <h3><span class="num">8</span>Changes to this policy</h3>
+      <p>If this policy changes, we'll update the effective date above. Continued use of the app after a change means you accept the update.</p>
+    </section>
+
+    <section class="clause">
+      <h3><span class="num">9</span>Contact</h3>
+      <div class="callout"><p>Questions about this policy or your data can be sent through the contact link on Tailtale's App Store product page.</p></div>
+    </section>
+  </article>
+
+  <article id="terms">
+    <div class="doc-title"><h2>Terms of Use</h2></div>
+    <p class="doc-sub">The terms you agree to by installing and using Tailtale.</p>
+
+    <section class="clause">
+      <h3><span class="num">1</span>Acceptance</h3>
+      <p>By downloading, installing or using Tailtale, you agree to these terms and to the Privacy Policy above. If you don't agree, please don't use the app.</p>
+    </section>
+
+    <section class="clause">
+      <h3><span class="num">2</span>What Tailtale is</h3>
+      <p>Tailtale is a personal health diary for pets: it helps you track vaccinations, medication, weight, symptoms, lab results and vet visits, and generate reports from that record. It is a record-keeping and reference tool, not a veterinary service.</p>
+    </section>
+
+    <section class="clause">
+      <h3><span class="num">3</span>Eligibility</h3>
+      <p>You must be at least 13 years old to use Tailtale. If you're under the age of majority where you live, a parent or guardian should review these terms with you.</p>
+    </section>
+
+    <section class="clause" id="terms-medical">
+      <h3><span class="num">4</span>Not veterinary advice</h3>
+      <p>Tailtale, including any AI-generated explanation or summary, does not diagnose conditions, prescribe treatment or replace a licensed veterinarian. Reference ranges, flags and AI explanations are informational aids for records you already have — always consult a veterinarian for medical decisions about your pet, and treat any note about an urgent or critical value as a prompt to seek care, not as a diagnosis.</p>
+    </section>
+
+    <section class="clause">
+      <h3><span class="num">5</span>Subscriptions and purchases</h3>
+      <p>Some features require a Tailtale Pro subscription or the one-time Pro purchase. Subscriptions are billed through your Apple Account and renew automatically unless cancelled at least 24 hours before the end of the current period, in App Store settings. Prices are shown in the App Store before purchase and may vary by region.</p>
+      <p>Where offered, an introductory price or free trial applies once per subscription per Apple Account. Family Sharing, where enabled for a plan, lets members of your Family Group use the Pro features you've purchased.</p>
+    </section>
+
+    <section class="clause">
+      <h3><span class="num">6</span>Your content</h3>
+      <p>You keep ownership of everything you enter into Tailtale — pet records, photos, documents and notes. You give us no rights to that content beyond what's needed to run the app and, where you've asked for an AI feature, to send the specific item you submitted to our AI provider for that request.</p>
+    </section>
+
+    <section class="clause">
+      <h3><span class="num">7</span>Acceptable use</h3>
+      <p>Don't use Tailtale to store or submit content that's unlawful, or attempt to reverse-engineer, disrupt or gain unauthorized access to the app or its backing services.</p>
+    </section>
+
+    <section class="clause">
+      <h3><span class="num">8</span>Disclaimers and liability</h3>
+      <p>Tailtale is provided "as is." To the extent permitted by law, we disclaim warranties of merchantability, fitness for a particular purpose, and non-infringement, and are not liable for indirect or consequential damages arising from use of the app. Nothing here limits liability that can't be limited under applicable law.</p>
+    </section>
+
+    <section class="clause">
+      <h3><span class="num">9</span>Changes and termination</h3>
+      <p>We may update these terms as the app evolves; material changes will be reflected in the effective date above. You can stop using Tailtale and delete it at any time; your exported data remains yours.</p>
+    </section>
+
+    <section class="clause">
+      <h3><span class="num">10</span>Contact</h3>
+      <div class="callout"><p>Reach us through the contact link on Tailtale's App Store product page.</p></div>
+    </section>
+  </article>
+</main>
+
+<footer>
+  <span>© 2026 Tailtale</span>
+  <span>Privacy Policy &amp; Terms of Use — effective September 14, 2026</span>
+</footer>
+
+</body>
+</html>
